@@ -1,1 +1,32 @@
 **/ignore_this.txt
+
+
+# 1. UN ARCHIVO ESPECÍFICO EN LA RAÍZ
+token.txt
+secretos.env
+
+# 2. UNA CARPETA ESPECÍFICA EN LA RAÍZ
+dist/
+build/
+
+# 3. UN ARCHIVO DENTRO DE UNA CARPETA
+config/conexion.json
+src/assets/private_key.pem
+
+# 4. VARIOS ARCHIVOS DENTRO DE UNA CARPETA
+# (Ignora todo lo que esté adentro, pero mantiene la carpeta)
+logs/*
+
+# 5. NO PREOCUPARSE POR LAS CARPETAS
+# (Ignora carpetas con este nombre sin importar dónde estén ocultas)
+**/temp/
+**/cache/
+__pycache__/
+
+# 6. NO PREOCUPARSE POR LAS EXTENSIONES
+# (Ignora cualquier archivo con estas extensiones en todo el proyecto)
+*.log
+*.tmp
+*.bak
+.DS_Store          # Muy útil si usas Mac
+Thumbs.db          # Muy útil si usas Windows
