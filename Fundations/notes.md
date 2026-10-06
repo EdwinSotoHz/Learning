@@ -70,7 +70,7 @@ file.txt
 ```bash
 git config --global alias.aliasname "commnand"
 git config --global alias.tree "log --graph --decorate --all --oneline"
-``` 
+```
 
 **Deshacer:**
 ```bash
@@ -82,16 +82,24 @@ git reset    # borra commit y vacía git add (archivos intactos)
 git checkout <file/hash/rama>   # cambiar rama, ver commit o regresar un file
 ```
 
-**Vincula tu repositorio local con GitHub:**
+**Ver**
+HEAD = ES DONDE ESTA EL "VISOR"
+MAIN/nombre de la rama = ES DONDE ACABA LA RAMA
 ```bash
-git remote add origin https://github.com
-git push -u origin main
+git checkout <hash>         # Solo mueve el visor HEAD
+git checkout <branch>       # Mueve el visor HEAD al ultimo commit de la rama  
 ```
 
 **Regesar oficialemente a un commit:**
 ```bash
-git reset --hard <hash>    # borra commits hasta el hash indicado y regresa los archivos a ese punto
+git reset --hard <hash>    # borra commits hasta el hash indicado y regresa los archivos a ese punto (ahora ese es el final de la rama, pero no mueve el HEAD, hay que moverlo con checkout)
 git reflog                 # muestra el log de todos los commits
+```
+
+**Vincula tu repositorio local con GitHub:**
+```bash
+git remote add origin https://github.com
+git push -u origin main
 ```
 
 # GitHub
