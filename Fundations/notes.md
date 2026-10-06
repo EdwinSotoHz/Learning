@@ -11,38 +11,46 @@ touch File.txt  # crear archivo
 code / agy file # abrir en VSCode
 clear           # limpiar terminal
 ```
+<br>
+<br>
 
 ## Git: Control de versiones distribuido
 
-**Version y help:**
+**Version y help**
 ```bash
 git -v
 git -h
 ```
+<br>
 
-**Config global:**
+**Config global**
 ```bash
 git config --global user.email ""
 git config --global user.name ""
 ```
+<br>
 
-**Config repo:**
+**Config repo**
 ```bash
 git config user.name ""
 git config user.email ""
 ```
+<br>
 
 **Conceptos:**
 - **HEAD** → dónde está situado el proyecto actualmente.
 - **Snapshot** → "foto" del repo (commit pusheado).
 - **Flujo:** Área local → Área Stage → Commit → Foto (local o GitHub).
 - En la rama `main` hay fotos acumuladas (estados del repo).
+- **HEAD** no es lo mismo que el final de la rama, aunque por lo regular debería ser lo mismo
+<br>
 
 **Iniciar en local:**
 ```bash
 git init                    # crea repo local (.git)
 git branch -m master main   # cambia el nombre de la rama master a main (solo si se necesita)
 ```
+<br>
 
 **Hacer commits:**
 ```bash
@@ -51,6 +59,7 @@ git add <file> <file> <file>      # agregar snapshots al área stage
 git commit -m ""            # guarda snapshot del área stage con mensaje
 git push                    # envía foto al álbum (solo si existe un repo en github)
 ```
+<br>
 
 **Ver historial:**
 ```bash
@@ -58,6 +67,7 @@ git log                     # hash y datos de commits
 git log --graph             # historial gráfico
 git diff                    # líneas cambiadas vs último commit
 ```
+<br>
 
 **.gitignore**
 ```
@@ -65,42 +75,58 @@ git diff                    # líneas cambiadas vs último commit
 /Folder/
 file.txt
 ```
+<br>
 
 **Alias**
 ```bash
 git config --global alias.aliasname "commnand"
 git config --global alias.tree "log --graph --decorate --all --oneline"
 ```
+<br>
 
-**Deshacer:**
+**Deshacer**
 ```bash
 git reset    # borra commit y vacía git add (archivos intactos)
 ```
+<br>
 
-**Navegar / recuperar:**
+**Navegar / recuperar**
 ```bash
 git checkout <file/hash/rama>   # cambiar rama, ver commit o regresar un file
 ```
+<br>
 
-**Ver**
+**Ver estados del repo**
 HEAD = ES DONDE ESTA EL "VISOR"
 MAIN/nombre de la rama = ES DONDE ACABA LA RAMA
 ```bash
 git checkout <hash>         # Solo mueve el visor HEAD
 git checkout <branch>       # Mueve el visor HEAD al ultimo commit de la rama  
 ```
+<br>
 
-**Regesar oficialemente a un commit:**
+**Regesar oficialemente a un commit**
 ```bash
-git reset --hard <hash>    # borra commits hasta el hash indicado y regresa los archivos a ese punto (ahora ese es el final de la rama, pero no mueve el HEAD, hay que moverlo con checkout)
+git reset --hard <hash>    # borra commits hasta el hash indicado y regresa los archivos a ese punto (ahora ese es el final de la rama, checkout no lo regresa, solo regresa el visor HEAD, pero no recontruye la rama, requiere usar otro hard reset)
 git reflog                 # muestra el log de todos los commits
 ```
+<br>
 
-**Vincula tu repositorio local con GitHub:**
+**Tags: para desplazarse o solo para marcar commits**
+```bash
+git tag <tag>        # Agrega un tag al commit actual
+git checkout <tag>   # Se mueve al tag indicado
+git tag              # Muestra todos los tags
+git tag -d <tag>     # Elimina un tag
+```
+<br>
+
+**Vincula tu repositorio local con GitHub**
 ```bash
 git remote add origin https://github.com
 git push -u origin main
 ```
+<br>
 
 # GitHub
 
