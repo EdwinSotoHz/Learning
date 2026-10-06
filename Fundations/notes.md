@@ -121,6 +121,13 @@ git tag -d <tag>     # Elimina un tag
 ```
 <br>
 
+**Ramas**
+```bash
+git branch <name>        # Crear una rama
+git checkout <switch>    # Pasar a esa rama
+```
+<br>
+
 **Vincula tu repositorio local con GitHub**
 ```bash
 git remote add origin https://github.com
