@@ -65,7 +65,7 @@ git reset    # borra commit y vacía git add (archivos intactos)
 
 **Navegar / recuperar:**
 ```bash
-git checkout <rama/hash/file>   # cambiar rama, ver commit o regresar un file
+git checkout <file/hash/rama>   # cambiar rama, ver commit o regresar un file
 ```
 
 # GitHub
