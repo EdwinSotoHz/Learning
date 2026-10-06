@@ -43,7 +43,7 @@ git config user.email ""
 ```bash
 git init                    # crea repo local (.git)
 git status                  # rama, files para el siguiente commit (en stage), archivos no en stage y no trackeados
-git add file file file      # agregar snapshots al área stage
+git add <file> <file> <file>      # agregar snapshots al área stage
 git commit -m ""            # guarda snapshot del área stage con mensaje
 git push                    # envía foto al álbum (solo si existe un repo en github)
 git log                     # hash y datos de commits
