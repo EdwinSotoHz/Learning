@@ -131,6 +131,7 @@ git merge <branch>       # Traer los cambios de la rama indicada <> a la rama ac
 - *En caso de conflicto, no se hace ni add ni commit en la rama, solo trae los cambios*
 - *Por lo que hay que borrar el codigo malo y dejar solo lo correcto y despues hacer el add y commit*
 - *Resolver conflictos es traer cambios, hacer add y hacer commit*
+- ***Merge es para traer cambios (actualizar mi rama) y en main es para actualizar el main***
 <br>
 
 **Vincula tu repositorio local con GitHub**
