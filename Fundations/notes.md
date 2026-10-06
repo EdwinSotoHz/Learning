@@ -145,19 +145,24 @@ git stash pop    # Obtener el stash
 git drop stash   # Borrar el stash
 ```
 <br>
+<br>
+
+## GitHub: Espejo de lo que hay en el repo local
 
 **Vincula tu repositorio local con GitHub**
 ```bash
 git remote add origin <ssh/https>
 git push -u origin main
 
-# Si hay conflicto, se puede permitir historias no relacionadas o forzar el push
+# Si hay conflicto, se puede permitir historias no relacionadas o forzar el push o hacer antes rebas
 git push -u origin main --allow-unrelated-histories
 git push -u origin main --force
+
+git config pull.rebase false
+git push -u origin main
+
+git fetch # Trae el historial de cambios
+git pull  # Trae los cambios
+
+git clone <ssh> # Clona el repositorio
 ```
-
-
-
-<br>
-
-## GitHub: Espejo de lo que hay en el repo local
