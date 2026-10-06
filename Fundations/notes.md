@@ -148,8 +148,12 @@ git drop stash   # Borrar el stash
 
 **Vincula tu repositorio local con GitHub**
 ```bash
-git remote add origin https://github.com
+git remote add origin <ssh/https>
 git push -u origin main
+
+# Si hay conflicto, se puede permitir historias no relacionadas o forzar el push
+git push -u origin main --allow-unrelated-histories
+git push -u origin main --force
 ```
 
 
