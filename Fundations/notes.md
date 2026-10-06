@@ -126,6 +126,7 @@ git tag -d <tag>     # Elimina un tag
 git branch <name>        # Crear una rama
 git checkout <switch>    # Pasar a esa rama
 git merge <branch>       # Traer los cambios de la rama indicada <> a la rama actual (buuena practica es que las ramas agregadas primero hagan merge de lo que hay en main y depues main haga merge)
+git diff <brach>         # Diferencia entre la rama actual y la rama indicada
 ```
 - *Un merge normalemnte hace un add y commit, pero su tarea es traer cambios y hacer el commit*
 - *En caso de conflicto, no se hace ni add ni commit en la rama, solo trae los cambios*
