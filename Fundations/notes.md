@@ -66,6 +66,12 @@ git diff                    # líneas cambiadas vs último commit
 file.txt
 ```
 
+**Alias**
+```bash
+git config --global alias.aliasname "commnand"
+git config --global alias.tree "log --graph --decorate --all --oneline"
+``` 
+
 **Deshacer:**
 ```bash
 git reset    # borra commit y vacía git add (archivos intactos)
