@@ -128,6 +128,4 @@ git push -u origin main
 ```
 <br>
 
-# GitHub
-
-Espejo de lo que hay en el repo local.
+## GitHub: Espejo de lo que hay en el repo local
