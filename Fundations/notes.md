@@ -117,7 +117,7 @@ git reflog                 # muestra el log de todos los commits
 git tag <tag>        # Agrega un tag al commit actual
 git checkout <tag>   # Se mueve al tag indicado
 git tag              # Muestra todos los tags
-git tag -d <tag>     # Elimina un tag
+git tag -d <tag>     # Elimina un tag 
 ```
 <br>
 
