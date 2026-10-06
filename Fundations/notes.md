@@ -127,11 +127,10 @@ git branch <name>        # Crear una rama
 git checkout <switch>    # Pasar a esa rama
 git merge <branch>       # Traer los cambios de la rama indicada <> a la rama actual (buuena practica es que las ramas agregadas primero hagan merge de lo que hay en main y depues main haga merge)
 ```
-
-
-*Un merge normalemnte hace un commit, pero su tarea es traer cambios y hacer el commit*
-*En caso de conflicto, no se hace el commit del merge en la rama, solo trae los cambios*
-*Por lo que hay que borrar el codigo malo y dejar solo lo correcto y despues hacer el commit*
+- *Un merge normalemnte hace un add y commit, pero su tarea es traer cambios y hacer el commit*
+- *En caso de conflicto, no se hace ni add ni commit en la rama, solo trae los cambios*
+- *Por lo que hay que borrar el codigo malo y dejar solo lo correcto y despues hacer el add y commit*
+- *Resolver conflictos es traer cambios, hacer add y hacer commit*
 <br>
 
 **Vincula tu repositorio local con GitHub**
