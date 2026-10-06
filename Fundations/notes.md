@@ -127,12 +127,14 @@ git branch <name>        # Crear una rama
 git checkout <switch>    # Pasar a esa rama
 git merge <branch>       # Traer los cambios de la rama indicada <> a la rama actual (buuena practica es que las ramas agregadas primero hagan merge de lo que hay en main y depues main haga merge)
 git diff <brach>         # Diferencia entre la rama actual y la rama indicada
+git branch -d <branch>   # Borrar una rama (solo si ya no se va a usar o si ya acabó su trabajo)
 ```
 - *Un merge normalemnte hace un add y commit, pero su tarea es traer cambios y hacer el commit*
 - *En caso de conflicto, no se hace ni add ni commit en la rama, solo trae los cambios*
 - *Por lo que hay que borrar el codigo malo y dejar solo lo correcto y despues hacer el add y commit*
 - *Resolver conflictos es traer cambios, hacer add y hacer commit*
 - ***Merge es para traer cambios (actualizar mi rama) y en main es para actualizar el main***
+- ***Las ramas se crear para trabajar algo aparte y cuando acaban se deben eliminar (aunque parezcan desaparecer, lo que pasa es que todo lo que hace la rama se integra al main)***
 <br>
 
 **Stash**
