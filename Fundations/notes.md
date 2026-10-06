@@ -134,11 +134,23 @@ git merge <branch>       # Traer los cambios de la rama indicada <> a la rama ac
 - ***Merge es para traer cambios (actualizar mi rama) y en main es para actualizar el main***
 <br>
 
+**Stash**
+```bash
+git stash        # Guarda el trabajo que está added ni commited en un stash 
+git stash list   # Ver el stash 
+git stash pop    # Obtener el stash
+git drop stash   # Borrar el stash
+```
+<br>
+
 **Vincula tu repositorio local con GitHub**
 ```bash
 git remote add origin https://github.com
 git push -u origin main
 ```
+
+
+
 <br>
 
 ## GitHub: Espejo de lo que hay en el repo local
