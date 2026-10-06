@@ -125,7 +125,7 @@ git tag -d <tag>     # Elimina un tag
 ```bash
 git branch <name>        # Crear una rama
 git checkout <switch>    # Pasar a esa rama
-git merge <branch>       # Fusiona la rama indicada <> con la rama actual (pj:)
+git merge <branch>       # Traer los cambios de la rama indicada <> a la rama actual (buuena practica es que las ramas agregadas primero hagan merge de lo que hay en main y depues main haga merge)
 ```
 <br>
 
