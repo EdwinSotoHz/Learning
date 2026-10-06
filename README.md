@@ -1,2 +1,3 @@
 # Learning
-Git Fundations y Actions
+- [Github Fundations](Fundations/notes.md)
+- [GitHub Actions](Actions/notes.md)
