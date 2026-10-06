@@ -82,6 +82,12 @@ git remote add origin https://github.com
 git push -u origin main
 ```
 
+**Regesar oficialemente a un commit:**
+```bash
+git reset --hard <hash>    # borra commits hasta el hash indicado y regresa los archivos a ese punto
+git reflog                 # muestra el log de todos los commits
+```
+
 # GitHub
 
 Espejo de lo que hay en el repo local.
