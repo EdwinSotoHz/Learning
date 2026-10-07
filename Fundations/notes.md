@@ -135,6 +135,7 @@ git branch -d <branch>   # Borrar una rama (solo si ya no se va a usar o si ya a
 - *Resolver conflictos es traer cambios, hacer add y hacer commit*
 - ***Merge es para traer cambios (actualizar mi rama) y en main es para actualizar el main***
 - ***Las ramas se crear para trabajar algo aparte y cuando acaban se deben eliminar (aunque parezcan desaparecer, lo que pasa es que todo lo que hace la rama se integra al main)***
+- ***Flujo Normal: Descargar repo, crear rama, hacer lo que se tenga que hacer, merge, eliminar rama, subir cambios con push***
 <br>
 
 **Stash**
