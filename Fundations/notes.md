@@ -208,3 +208,11 @@ git clone <ssh> # Clona el repositorio
     2\. Hacer rama
     3\. Trabajar
     4\. Hacer push a la rama `git push origin <branch>`
+    5\. Despues hay que hacer meterse al repo, abrir el pull request y esperar a que lo integren y eliminar la rama
+    <table>
+        <tr>
+            <td colspan="2" align="center">
+                <img src="img/image6.png" width="100%" alt="Imagen 6" />
+            </td>
+        </tr>
+    </table>
