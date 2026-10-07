@@ -200,3 +200,11 @@ git clone <ssh> # Clona el repositorio
             </td>
         </tr>
     </table>
+
+**Colaborador: Normalmente repos privados o internos del mismo equipo**
+- Otra forma más directa de colaborar
+- Es diferente al fork pero depende del caso
+    1\. Clonar el orignal
+    2\. Hacer rama
+    3\. Trabajar
+    4\. Hacer push a la rama `git push origin <branch>`
