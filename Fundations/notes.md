@@ -86,7 +86,7 @@ git config --global alias.tree "log --graph --decorate --all --oneline"
 
 **Deshacer**
 ```bash
-git reset    # borra commit y vacía git add (archivos intactos)
+git reset    # vacía git add (archivos intactos)
 ```
 <br>
 
@@ -182,7 +182,15 @@ git clone <ssh> # Clona el repositorio
             <img src="img/image1.png" width="100%" alt="Imagen 1" />
             </td>
             <td align="center">
-            <img src="img/image2.png" width="100%" alt="Imagen 2" />
+                <img src="img/image2.png" width="100%" alt="Imagen 2" />
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+            <img src="img/image3.png" width="100%" alt="Imagen 3" />
+            </td>
+            <td align="center">
+                <img src="img/image4.png" width="100%" alt="Imagen 4" />
             </td>
         </tr>
     </table>
