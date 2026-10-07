@@ -166,3 +166,5 @@ git pull  # Trae los cambios
 
 git clone <ssh> # Clona el repositorio
 ```
+
+**Fork**
