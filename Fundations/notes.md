@@ -172,10 +172,11 @@ git clone <ssh> # Clona el repositorio
 **Fork: Para colaborar en repos opensource o publicos de desconocidos**
 - Es una copia de un repo pero un repo propio
 - Se puede hacer que cambios en el fork se envien al repo original:
-	1\. Crear fork y clonarlo
+    1\. Crear fork y clonarlo
     2\. Sincronizar 
     3\. Hacer pull request (PR)
     4\. El dueño decide si aceptarlo o no
+    5\. El tambien puede enviar su aprovacion con comentario, pero debe hacer un merge para integrar los cambios (otro commit)
     <table>
         <tr>
             <td align="center">
@@ -187,10 +188,15 @@ git clone <ssh> # Clona el repositorio
         </tr>
         <tr>
             <td align="center">
-            <img src="img/image3.png" width="100%" alt="Imagen 3" />
+                <img src="img/image3.png" width="100%" alt="Imagen 3" />
             </td>
             <td align="center">
                 <img src="img/image4.png" width="100%" alt="Imagen 4" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <img src="img/image5.png" width="100%" alt="Imagen 5" />
             </td>
         </tr>
     </table>
