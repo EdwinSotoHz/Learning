@@ -108,7 +108,7 @@ git checkout <branch>       # Mueve el visor HEAD al ultimo commit de la rama
 **Regesar oficialemente a un commit**
 ```bash
 git reset --hard <hash>    # borra commits hasta el hash indicado y regresa los archivos a ese punto (ahora ese es el final de la rama, checkout no lo regresa, solo regresa el visor HEAD, pero no recontruye la rama, requiere usar otro hard reset)
-git reflog                 # muestra el log de todos los commits
+git reflog                 # muestra el log de todo lo realizado
 ```
 <br>
 
@@ -158,11 +158,12 @@ git push -u origin main
 git push -u origin main --allow-unrelated-histories
 git push -u origin main --force
 
-git config pull.rebase false
-git push -u origin main
-
+# PARA CUANDO NO SE ESTÁ ACTUALIZADO Y NO SE PUEDE HACER PUSH
 git fetch # Trae el historial de cambios
 git pull  # Trae los cambios
+
+git config pull.rebase false  # Forma de hacer merge y pull
+git push -u origin main
 
 git clone <ssh> # Clona el repositorio
 ```
