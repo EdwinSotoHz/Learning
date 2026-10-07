@@ -216,3 +216,6 @@ git clone <ssh> # Clona el repositorio
             </td>
         </tr>
     </table>
+
+**Conflictos**
+- De preferencia usar el editor de GitHub para resolverlos y una vez resueltos marcarlos como resueltos y darle merge
