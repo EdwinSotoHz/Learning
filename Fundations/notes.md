@@ -169,4 +169,10 @@ git push -u origin main
 git clone <ssh> # Clona el repositorio
 ```
 
-**Fork**
+**Fork: Para colaborar en repos opensource o publicos de desconocidos**
+- Es una copia de un repo pero un repo propio
+- Se puede hacer que cambios en el fork se envien al repo original:
+	1. Crear fork y clonarlo
+    2. Sincronizar 
+    3. Hacer pull request (PR)
+    4. El dueño decide si aceptarlo o no
