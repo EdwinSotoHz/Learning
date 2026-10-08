@@ -47,3 +47,4 @@ Grandes proveedores como **Azure** y **AWS** facilitan el proceso ofreciendo en 
 - Por ejemplo: .github/workflows/main.yaml
 
 ### Ejemplo workflow
+Suponiendo que hay un script que genera un json, se pueden hacer ejecuciones de actions.
