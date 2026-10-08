@@ -219,3 +219,48 @@ git clone <ssh> # Clona el repositorio
 
 **Conflictos**
 - De preferencia usar el editor de GitHub para resolverlos y una vez resueltos marcarlos como resueltos y darle merge
+
+**Git Flow y GitHub Flow"**
+Uno de los flujos para trabajar con git es Flow, el cual establece:
+Aquí tienes la lista breve con **origen** y **destino(s)** de cada rama:
+
+### Git Flow – reglas con origen y merge
+
+1. **`main`** → rama permanente. Solo producción. Lleva etiquetas (`v1.2.0`). **No nace de nadie.**
+2. **`develop`** → rama permanente. Integración del desarrollo. **Nace de `main`** (una sola vez, al iniciar el proyecto).
+3. **`feature/*`** → **nace de `develop`** → **merge a `develop`**.
+4. **`release/*`** → **nace de `develop`** → **merge a `main`** (con etiqueta) **y a `develop`**.
+5. **`hotfix/*`** → **nace de `main`** → **merge a `main`** (con etiqueta) **y a `develop`**.
+
+### Regla de oro
+
+- **`feature`** → solo toca `develop`.
+- **`release`** y **`hotfix`** → tocan **las dos permanentes** (`main` y `develop`), se pasa a develop para que todos tengan coregido el error y en main para que esté corregido en producción
+- **`main`** = producción + etiquetas, nunca posicionarse ahí solo se le hacen merge.
+- **`develop`** = integración continua del equipo
+- **`eliminación`** = Las ramas se eliminan cuando ya cumplen su funcion y termina su ciclo de vida.
+
+### GitHub Flow (para contraste)
+
+1. **`main`** → permanente, siempre desplegable.
+2. **Cualquier rama** (feature, fix, etc.) → **nace de `main`** → **merge a `main`** vía Pull Request.
+3. No hay `develop`, ni `release`, ni `hotfix` como ramas formales.
+
+### Herramienta util para trabajar con FLow
+brew install git-flow
+git flow init
+git flow <branch-type> <branch-name>
+
+Trabajar, hacer add y commit
+
+git flow <branch-type> finish <branch-name>
+Borra rama y regresa a develop
+
+Normalmente se hace un release para después agregar algo al main y depués ahora desde el main hacer un push
+
+### Comandos medio raros y de cuidado
+Cherry pick
+Seleccionar algo de un commit que nunca se usó o que se borró para aprobecharlo en un flujo actual
+
+Rebase 
+Es para traer una rama al final de la rama actual pero tambien puede borrar historial de cambios
