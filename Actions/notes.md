@@ -37,6 +37,13 @@ Grandes proveedores como **Azure** y **AWS** facilitan el proceso ofreciendo en 
 
 ## **Conceptos Clave**
 - **Workflow (Flujo de trabajo):** Es un proceso automatizado que se ejecuta en respuesta a un evento. Está definido en un archivo YAML dentro del directorio `.github/workflows/`.
-- **Job (Trabajo):** Es un conjunto de pasos que se ejecutan en el mismo *runner* (máquina virtual). Los *jobs* pueden ejecutarse en paralelo o de forma secuencial.
-- **Step (Paso):** Es una tarea individual que se ejecuta dentro de un *job*. Puede ser un comando de shell, una acción o una secuencia de acciones.
-- **Runner (Ejecutor):** Es una máquina virtual (VM) donde se ejecuta el *workflow*. Puede ser un *runner* de GitHub (VM compartidas) o un *runner* autohospedado (tu propia máquina).
+- **Job (Trabajo):** Es un conjunto de pasos que se ejecutan en el mismo *runner*, pueden ejecutarse en paralelo o de forma secuencial.
+- **Step (Paso):** Puede ser un comando de shell, una acción o una secuencia de acciones.
+- **Runner (Ejecutor):** Es una VM donde se ejecuta el *workflow*. Puede ser un *runner* de GitHub (VM compartidas) o un *runner* autohospedado.
+
+## Primeros pasos
+- Crear una carpeta .github/workflows/
+- Dentro de la carpeta, crear un archivo YAML con el nombre del workflow.
+- Por ejemplo: .github/workflows/main.yaml
+
+### Ejemplo workflow
