@@ -31,3 +31,12 @@ GitHub Actions es precisamente la herramienta que te permite **construir tus pro
 Cuando configuras un archivo en GitHub Actions, le estás diciendo a GitHub: *"Cada vez que yo haga un `push` a la rama `main`, quiero que corras este script que compila mi proyecto, ejecute mis pruebas y, si todo sale bien, lo despliegue automáticamente a mi servidor de Azure o AWS"*.
 
 **Pipeline (o canalización):** Serie de pasos o procesos conectados de forma secuencial y automatizada para cumplir un objetivo específico.
+
+### Colaboracion
+Grandes proveedores como **Azure** y **AWS** facilitan el proceso ofreciendo en el Marketplace sus propias *actions* oficiales (ej. autenticación y despliegue en la nube), evitando construir integraciones desde cero.
+
+## **Conceptos Clave**
+- **Workflow (Flujo de trabajo):** Es un proceso automatizado que se ejecuta en respuesta a un evento. Está definido en un archivo YAML dentro del directorio `.github/workflows/`.
+- **Job (Trabajo):** Es un conjunto de pasos que se ejecutan en el mismo *runner* (máquina virtual). Los *jobs* pueden ejecutarse en paralelo o de forma secuencial.
+- **Step (Paso):** Es una tarea individual que se ejecuta dentro de un *job*. Puede ser un comando de shell, una acción o una secuencia de acciones.
+- **Runner (Ejecutor):** Es una máquina virtual (VM) donde se ejecuta el *workflow*. Puede ser un *runner* de GitHub (VM compartidas) o un *runner* autohospedado (tu propia máquina).
