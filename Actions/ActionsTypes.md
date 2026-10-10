@@ -24,3 +24,4 @@ Aquí tienes el resumen de los tres tipos de actions según ese texto:
 **3. Composite actions**
 - **Combinan varios steps** de workflow dentro de una sola acción.
 - Sirven para **agrupar varios comandos** y ejecutarlos luego como **un solo step**.    
+

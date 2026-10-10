@@ -51,6 +51,10 @@ jobs: # aquí van todos los jobs
 
 - Los archivos generados Solo se generan en el runner, pero se pueden commitear desde el runner.
 - LOS COMANDOS `run` se ejecutan desde la raíz del repositorio `$GITHUB_WORKSPACE`, no desde la carpeta del workflow.
+- Los `run` y `uses` no pueden estar en el mismo ITEM, un step usa cualquiera, pero no ambos.
 - En jobs `name` (si lleva), `uses` y `with` deben ser items hermanos (tambien `run` independientes).
-- `runs-on`, `permissions` y `steps` estan al mismo nivel
+- `runs-on`, `permissions` y `steps` estan al mismo nivel para configurar el job.
 - Se puede crear desde actions o en local el archivo YAML, y una vez esta en el repo ahora si correrá el action (triggerado por un push/pull o lo que sea).
+
+Una vez el workflow es disparado, en la seccion de actions del repo, se podra ver el proceso en ejecucion, con sus respectivos jobs y pasos.
+También tiene mas opciones como re-run, ver el workflow, el uso de la vm.
