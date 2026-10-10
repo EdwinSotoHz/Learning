@@ -36,15 +36,85 @@ Cuando configuras un archivo en GitHub Actions, le estás diciendo a GitHub: *"C
 Grandes proveedores como **Azure** y **AWS** facilitan el proceso ofreciendo en el Marketplace sus propias *actions* oficiales (ej. autenticación y despliegue en la nube), evitando construir integraciones desde cero.
 
 ## **Conceptos Clave**
-- **Workflow (Flujo de trabajo):** Es un proceso automatizado que se ejecuta en respuesta a un evento. Está definido en un archivo YAML dentro del directorio `.github/workflows/`.
-- **Job (Trabajo):** Es un conjunto de pasos que se ejecutan en el mismo *runner*, pueden ejecutarse en paralelo o de forma secuencial.
-- **Step (Paso):** Puede ser un comando de shell, una acción o una secuencia de acciones.
-- **Runner (Ejecutor):** Es una VM donde se ejecuta el *workflow*. Puede ser un *runner* de GitHub (VM compartidas) o un *runner* autohospedado.
+**Concepto Clave:** Es como si GitHub clonara el repo en una VM e hiciera lo que le indico en el workflow, por ende puede generar archivos, modificar archivos, hacer commits y hacer push de esos cambios.
+
+- **Workflow** → proceso automatizado completo (archivo YAML en `.github/workflows/`).
+  ***Contiene:** triggers (`on:`) + uno o varios **jobs***.
+<br>
+
+- **Job** → conjunto de pasos que corren en el mismo runner.
+  ***Contiene:** `runs-on` (dónde corre) + uno o varios **steps***.
+<br>
+
+- **Step** → unidad dentro de un job.
+  ***Contiene:** un comando shell (`run:`) **o** una invocación a una action (`uses:`)*.
+<br>
+
+- **Action** → componente reutilizable que se invoca dentro de un step (`uses:`).
+  ***Contiene:** la lógica empaquetada — comandos agrupados (composite), código JS (JavaScript) o un contenedor con entrypoint (Docker), más su `action.yml` con inputs/outputs*.
+<br>
+
+- **Runner** → la VM donde se ejecuta el job. TEMPORAL (efímero y aislado)
+  ***Contiene:** el entorno de ejecución (SO, herramientas preinstaladas) donde corren los steps*.
 
 ## Primeros pasos
 - Crear una carpeta .github/workflows/
 - Dentro de la carpeta, crear un archivo YAML con el nombre del workflow.
 - Por ejemplo: .github/workflows/main.yaml
 
-### Ejemplo workflow
-Suponiendo que hay un script que genera un json, se pueden hacer ejecuciones de actions.
+## YAML
+> Escalar = 1 solo valor
+> Mapa = objeto, diccionario, hash
+> Secuencia = array, lista
+
+- En YAML no se permiten tabs para indentar, solo espacios 2 típicamente.
+- Un Mapa es un conjunto de pares `<clave>: <valor>` al mismo nivel.
+- Sangria dice dentro de que nivel/clave están
+- Se maneja `<clave>: <valor>`
+- Una clave con valor escalar no puede tener hijos (si tiene valor delante no puede tener hijos)
+- Una clave puede tener mas claves anidadas
+
+```yaml
+clave1:
+  clave2: valor2
+```
+
+- Puede contener varios elementos como valores con `-`, caso solo valores (array):
+```yaml
+clave: 
+  - valor1
+  - valor2
+  - valor3
+```
+
+- Puede contener varios elementos como propiedades, caso propiedades (objeto):
+```yaml
+clave: 
+  claveProp1: valor
+  claveProp2: valor
+  claveProp3: valor
+```
+
+- Puede contener varios elementos como objetos con propiedades cada uno, caso objetos con propiedades (array de objetos), se usa para tener varios mapas distintos en una clave:
+```yaml
+clave: 
+  - claveObj1:
+      claveProp: valor
+  - claveObj2:
+      claveProp1: valor
+      claveProp2: valor
+  - claveObj3:
+      claveProp: 
+        - valor1
+        - valor2
+        - valor3
+```
+
+- Se puede tener una lista de mapas, donde cada mapa (ítem) tiene las mismas claves que los demás. Cada `-` abre un nuevo mapa, se usa para tener mapas "iguales" en la misma clave:
+```yaml
+clave: 
+  - nombre: Juan
+    edad: 30
+  - nombre: Ana
+    edad: 25
+```
