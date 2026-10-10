@@ -25,3 +25,22 @@ Aquí tienes el resumen de los tres tipos de actions según ese texto:
 - **Combinan varios steps** de workflow dentro de una sola acción.
 - Sirven para **agrupar varios comandos** y ejecutarlos luego como **un solo step**.    
 
+## Identificar tipos
+**Workflow** = Usar actions
+**Action** = Logica empaquetada y reutilizable
+
+Un workflow no es "de un tipo"; es un orquestador que puede combinar múltiples jobs, steps y actions de cualquier tipo.
+
+Para identificar los tipos de cada action en un workflow hay claves:
+- `run` no es una action
+- `uses` indica consumir una action
+
+| Tipo de Action | Lo que verás en `action.yml` | ¿Cómo se ejecuta? |
+| :--- | :--- | :--- |
+| **JavaScript** | `runs: using: 'node20'` (`node24`) y un `main:` apuntando a un `.js`  | Directamente en el runner (rápido y multiplataforma)  |
+| **Docker Container** | `runs: using: 'docker'` y un `image:` que apunta a un `Dockerfile` o una imagen  | Dentro de un contenedor (aislado, pero solo en Linux)  |
+| **Composite** | `runs: using: 'composite'` y una lista `steps:` con los comandos a ejecutar  | Agrupa varios pasos y los ejecuta en el runner  |
+
+- Si ves que la action está en un repositorio oficial de `actions/` o es muy popular, casi siempre será de tipo **JavaScript**. Las Docker Actions son menos comunes para tareas simples.
+
+- La única regla es que cada paso de tipo `run:` debe especificar explícitamente su `shell:` (como `bash`, `pwsh` o `python`). Por eso puedes mezclar comandos de distintos lenguajes dentro de la misma acción.

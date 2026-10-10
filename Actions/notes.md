@@ -118,3 +118,15 @@ clave:
   - nombre: Ana
     edad: 25
 ```
+
+## Roles de action (Consumir y crear)
+El uso común en Actions que es crear workflows consumiendo Actions (workflows):
+- Crear un workflow en `.github/workflows/*.yml` 
+- Consumir actions de repos externos: `uses: usuario-github/hello-world-action@v1`
+- Comunmente usan pasos y requerimentos específicos y usan `uses` y `run`.
+
+El otro uso es crear actions Locales que además pueden ser consumidas en otros repos (actions):
+- Crear un archivo `action.yml` en `.github/actions/`.
+- Dentro de este archivo, se definen `runs`, `inputs`, `outputs` y los `steps` que la componen.
+- Puede tener `uses` y `run` como un workflow, pero no tiene `on` porque es una action local.
+- Son tipo js, docker o composite (definido en el `runs:`)

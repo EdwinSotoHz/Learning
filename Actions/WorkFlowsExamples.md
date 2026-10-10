@@ -1,7 +1,7 @@
-### Primer Ejemplo Workflow
+### Primer Ejemplo Workflow (Consumir actions ya creadas)
 Suponiendo que hay un script python que genera un json, se pueden hacer ejecuciones de actions.
 
-> Para casos concretos se puede usar actions ya hechas, pero para este caso se planea hacer una desde cero
+> Para casos concretos se puede usar actions ya hechas, pero para este caso se planea hacer un workflow desde cero
 
 - Primero dar click en Actions
 - Después hacemos una por nosotros mismos
@@ -58,3 +58,15 @@ jobs: # aquí van todos los jobs
 
 Una vez el workflow es disparado, en la seccion de actions del repo, se podra ver el proceso en ejecucion, con sus respectivos jobs y pasos.
 También tiene mas opciones como re-run, ver el workflow, el uso de la vm.
+
+#### `run` multilinea
+```yaml
+- name: STEP_X
+  run: |
+    npm install
+    npm run build
+```
+
+
+El ejemplo anterior era para crear un workflow que consume ciertas actions.
+Pero las actions se pueden crear y pueden ser tipo js, docker o composite.
